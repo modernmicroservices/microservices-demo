@@ -10,8 +10,11 @@ public class Feedback {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private final long id;
-	private final String content;
+	private long id;
+	private String content;
+	
+	public Feedback() {
+	}
 
 	public Feedback(long id, String content) {
 		this.id = id;

@@ -1,6 +1,15 @@
 ## Feedback Service
-Service with basic crud operations for customer feedback
+Service with basic CRUD operations for customer feedback
+
+```
+docker build  -t modernmicroservices/feedbackservice .
+docker run -d -p 8080:8080 modernmicroservices/feedbackservice
+```
+
 
 ### Examples
 ```
+curl -H "Content-Type: application/json" -X POST http://localhost:9090/feedback -d "{\"content\":\"Test Value\"}"
+
 curl --request GET  http://localhost:8080/feedback/1
+```

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: feedbackapp
+spec: 
+  containers:
+  - name: feedbackapp
+    imagePullPolicy: Always
+    image: docker.io/modernmicroservices/feedbackservice:latest
+  imagePullSecrets:
+  - name: regcred
